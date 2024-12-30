@@ -1,5 +1,5 @@
 import { PaletteOptions } from "@mui/material"
-import { blue, purple } from "@mui/material/colors"
+import { blue, grey } from "@mui/material/colors"
 
 // ----------------------------------------------------------------------
 
@@ -11,10 +11,10 @@ const PALETTE: PaletteOptions = {
     contrastText: "#FFF",
   },
   secondary: {
-    light: purple[300],
-    main: purple[500],
-    dark: purple[700],
-    contrastText: "#FFF",
+    light: grey[50],
+    main: grey[100],
+    dark: grey[200],
+    contrastText: grey[900],
   },
   text: {
     primary: "#FFF",
