@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "prepare": "husky",
     "type-check": "tsc --noEmit",
-    "lint:pre-commit": "eslint --ignore-path ./.eslintignore --max-warnings 0",
+    "lint:pre-commit": "eslint --max-warnings 0",
     "format:pre-commit": "prettier --ignore-unknown --write"
   },
   "lint-staged": {
@@ -31,13 +31,16 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.2.0",
+    "@eslint-react/eslint-plugin": "^1.26.2",
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
+    "eslint-plugin-format": "^1.0.1",
     "eslint-plugin-perfectionist": "^4.9.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
     "postcss": "^8",
