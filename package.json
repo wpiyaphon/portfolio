@@ -10,13 +10,11 @@
     "lint": "eslint .",
     "prepare": "husky",
     "type-check": "tsc --noEmit",
-    "lint:pre-commit": "eslint --max-warnings 0",
-    "format:pre-commit": "prettier --ignore-unknown --write"
+    "lint:pre-commit": "eslint --max-warnings 0"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "yarn lint:pre-commit",
-      "yarn format:pre-commit"
+      "yarn lint:pre-commit"
     ]
   },
   "dependencies": {

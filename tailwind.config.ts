@@ -1,5 +1,5 @@
-import type { Config } from "tailwindcss";
-import tailwindcssAnimate from "tailwindcss-animate";
+import type { Config } from "tailwindcss"
+import tailwindcssAnimate from "tailwindcss-animate"
 
 export default {
   content: [
@@ -60,4 +60,4 @@ export default {
       },
     },
   },
-} satisfies Config;
+} satisfies Config
