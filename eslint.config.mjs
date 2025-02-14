@@ -1,16 +1,27 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import antfu from "@antfu/eslint-config"
+import perfectionist from "eslint-plugin-perfectionist"
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-];
-
-export default eslintConfig;
+export default antfu(
+  {
+    formatters: true,
+    react: true,
+    stylistic: {
+      indent: 2,
+      quotes: "double",
+    },
+    typescript: true,
+  },
+  {
+    plugins: [perfectionist.configs["recommended-alphabetical"]],
+    rules: {
+      "no-console": "warn",
+      "perfectionist/sort-objects": "error",
+      "ts/consistent-type-definitions": "off",
+      "unicorn/throw-new-error": "off",
+      "unused-imports/no-unused-imports": "error",
+    },
+  },
+  {
+    ignores: ["build", "**/*.json", ".husky/install.mjs"],
+  },
+)
