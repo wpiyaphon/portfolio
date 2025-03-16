@@ -58,6 +58,9 @@ export default {
           foreground: "hsl(var(--secondary-foreground))",
         },
       },
+      letterSpacing: {
+        widest: "0.3em",
+      },
     },
   },
 } satisfies Config
