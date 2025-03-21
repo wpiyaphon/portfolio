@@ -30,14 +30,14 @@ export default function Roadmap({ items }: RoadmapProps) {
             {/* -- Icon -- */}
             <div
               id="icon"
-              className="dark:invert absolute md:left-1/2 left-[-8px] top-[calc(50%-32px)] md:top-8 bottom-0 w-12 h-16 flex items-center md:translate-x-[-50%] bg-white rounded-full p-2 z-20"
+              className="absolute md:left-1/2 left-[-8px] top-[calc(50%-32px)] md:top-8 bottom-0 w-12 h-16 flex items-center md:translate-x-[-50%] bg-background rounded-full p-2 z-30 shadow-lg"
             >
               <Image
                 src={item.image}
                 alt={item.title}
                 width={32}
                 height={32}
-                className="opacity-60"
+                className="invert"
               />
               <div
                 className={`absolute p-2 z-20 hidden md:block ${index % 2 === 0 ? "md:left-16" : "md:-left-32"}`}
