@@ -2,17 +2,17 @@ import React from "react"
 
 // ----------------------------------------------------------------------
 
-type TitleColorVariants = "blue" | "purple" | "orange"
+type SectionColorVariants = "blue" | "purple" | "orange"
 
-type TitleLineProps = {
+type SectionDividerProps = {
   number: number
   title: string
   subtitle?: string
-  color?: TitleColorVariants
+  color?: SectionColorVariants
 }
 
 const TITLE_GRADIENT_COLORS: Record<
-  TitleColorVariants,
+  SectionColorVariants,
   { from: string, to: string }
 > = {
   blue: { from: "from-[#0069d2]", to: "to-[#00e5ff]" },
@@ -22,12 +22,12 @@ const TITLE_GRADIENT_COLORS: Record<
 
 // ----------------------------------------------------------------------
 
-export default function TitleLine({
+export default function SectionDivider({
   color = "blue",
   number,
   subtitle,
   title,
-}: TitleLineProps) {
+}: SectionDividerProps) {
   return (
     <div className="grid grid-flow-row gap-8 text-center justify-center mb-36">
       <div>

@@ -1,5 +1,5 @@
 import Roadmap from "@/components/roadmap"
-import TitleLine from "@/components/title-line"
+import SectionDivider from "@/components/section-divider"
 import Image from "next/image"
 
 // ----------------------------------------------------------------------
@@ -97,7 +97,7 @@ export default function Home() {
       {/* -- About -- */}
       <section className=" pb-20 sm:p-20 text-center">
         <h6 className="text-gray-400 mb-8 tracking-widest">EXPLORE ABOUT ME</h6>
-        <TitleLine
+        <SectionDivider
           number={1}
           title="About"
           subtitle="I am a web developer with a passion for creating beautiful and functional web applications. I am a quick learner and I am always looking for new challenges."
@@ -149,7 +149,7 @@ export default function Home() {
 
       {/* -- Work Experience -- */}
       <section className=" pb-20 sm:p-20 text-center">
-        <TitleLine number={2} title="My Experience" color="orange" />
+        <SectionDivider number={2} title="My Experience" color="orange" />
         <Roadmap items={EXPERIENCES} />
       </section>
     </div>
