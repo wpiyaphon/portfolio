@@ -2,7 +2,13 @@ import { cn } from "@/lib/utils"
 
 import * as React from "react"
 
-function Card({ className, ref, ...props }: React.HTMLAttributes<HTMLDivElement> & { ref?: React.RefObject<HTMLDivElement | null> }) {
+function Card({
+  className,
+  ref,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement> & {
+  ref?: React.RefObject<HTMLDivElement | null>
+}) {
   return (
     <div
       ref={ref}
@@ -16,7 +22,13 @@ function Card({ className, ref, ...props }: React.HTMLAttributes<HTMLDivElement>
 }
 Card.displayName = "Card"
 
-function CardHeader({ className, ref, ...props }: React.HTMLAttributes<HTMLDivElement> & { ref?: React.RefObject<HTMLDivElement | null> }) {
+function CardHeader({
+  className,
+  ref,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement> & {
+  ref?: React.RefObject<HTMLDivElement | null>
+}) {
   return (
     <div
       ref={ref}
@@ -27,7 +39,13 @@ function CardHeader({ className, ref, ...props }: React.HTMLAttributes<HTMLDivEl
 }
 CardHeader.displayName = "CardHeader"
 
-function CardTitle({ className, ref, ...props }: React.HTMLAttributes<HTMLDivElement> & { ref?: React.RefObject<HTMLDivElement | null> }) {
+function CardTitle({
+  className,
+  ref,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement> & {
+  ref?: React.RefObject<HTMLDivElement | null>
+}) {
   return (
     <div
       ref={ref}
@@ -38,7 +56,13 @@ function CardTitle({ className, ref, ...props }: React.HTMLAttributes<HTMLDivEle
 }
 CardTitle.displayName = "CardTitle"
 
-function CardDescription({ className, ref, ...props }: React.HTMLAttributes<HTMLDivElement> & { ref?: React.RefObject<HTMLDivElement | null> }) {
+function CardDescription({
+  className,
+  ref,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement> & {
+  ref?: React.RefObject<HTMLDivElement | null>
+}) {
   return (
     <div
       ref={ref}
@@ -49,12 +73,24 @@ function CardDescription({ className, ref, ...props }: React.HTMLAttributes<HTML
 }
 CardDescription.displayName = "CardDescription"
 
-function CardContent({ className, ref, ...props }: React.HTMLAttributes<HTMLDivElement> & { ref?: React.RefObject<HTMLDivElement | null> }) {
+function CardContent({
+  className,
+  ref,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement> & {
+  ref?: React.RefObject<HTMLDivElement | null>
+}) {
   return <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
 }
 CardContent.displayName = "CardContent"
 
-function CardFooter({ className, ref, ...props }: React.HTMLAttributes<HTMLDivElement> & { ref?: React.RefObject<HTMLDivElement | null> }) {
+function CardFooter({
+  className,
+  ref,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement> & {
+  ref?: React.RefObject<HTMLDivElement | null>
+}) {
   return (
     <div
       ref={ref}
@@ -65,4 +101,11 @@ function CardFooter({ className, ref, ...props }: React.HTMLAttributes<HTMLDivEl
 }
 CardFooter.displayName = "CardFooter"
 
-export { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
+export {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+}
