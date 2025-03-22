@@ -1,5 +1,6 @@
 import Roadmap from "@/components/roadmap"
 import SectionDivider from "@/components/section-divider"
+import TypingText from "@/components/typing-text"
 import Image from "next/image"
 
 // ----------------------------------------------------------------------
@@ -61,6 +62,7 @@ export default function Home() {
               React
             </span>
           </h1>
+
           <h6 className="text-center text-gray-400 max-w-2xl">
             I have strong foundation in HTML, CSS, and TypeScript, and I am
             skilled in creating interactive and visually appealing web
@@ -100,7 +102,12 @@ export default function Home() {
         <SectionDivider
           number={1}
           title="About"
-          subtitle="I am a web developer with a passion for creating beautiful and functional web applications. I am a quick learner and I am always looking for new challenges."
+          subtitle={(
+            <TypingText
+              text1="As a web developer with a passion for creating functional and visually appealing web applications,"
+              text2="I am always eager to learn and take on new challenges to improve my skills."
+            />
+          )}
         />
 
         <h6 className="text-gray-400 text-center tracking-widest mb-8">

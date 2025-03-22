@@ -11,6 +11,9 @@ export default {
   plugins: [tailwindcssAnimate],
   theme: {
     extend: {
+      animation: {
+        typing: "typing 2.5s steps(40) forwards, blink .7s 3",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -56,6 +59,15 @@ export default {
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+        },
+      },
+      keyframes: {
+        blink: {
+          "50%": { borderColor: "gray", borderRightWidth: "2px" },
+        },
+        typing: {
+          "0%": { opacity: "0", width: "0%" },
+          "100%": { opacity: "100", width: "100%" },
         },
       },
       letterSpacing: {

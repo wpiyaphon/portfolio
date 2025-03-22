@@ -1,13 +1,9 @@
-import React from "react"
-
-// ----------------------------------------------------------------------
-
 type SectionColorVariants = "blue" | "purple" | "orange"
 
 type SectionDividerProps = {
   number: number
   title: string
-  subtitle?: string
+  subtitle?: string | React.ReactNode
   color?: SectionColorVariants
 }
 
@@ -45,7 +41,13 @@ export default function SectionDivider({
       >
         {title}
       </h2>
-      {subtitle && <h6 className=" text-gray-400 max-w-5xl ">{subtitle}</h6>}
+      {typeof subtitle === "string"
+        ? (
+            <h6 className="text-gray-400 max-w-5xl">{subtitle}</h6>
+          )
+        : (
+            subtitle
+          )}
     </div>
   )
 }
