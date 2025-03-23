@@ -1,14 +1,35 @@
+import type { HTMLMotionProps, Variants } from "framer-motion"
 import { cn } from "@/lib/utils"
+import { motion } from "framer-motion"
 
 import * as React from "react"
 
 function Card({
+  animation,
   className,
   ref,
   ...props
 }: React.HTMLAttributes<HTMLDivElement> & {
   ref?: React.RefObject<HTMLDivElement | null>
+  animation?: {
+    variants: Variants
+    initial: string
+    animate: string
+  }
 }) {
+  if (animation) {
+    return (
+      <motion.div
+        ref={ref}
+        className={cn(
+          "rounded-xl border bg-card text-card-foreground shadow",
+          className,
+        )}
+        {...animation}
+        {...(props as HTMLMotionProps<"div">)}
+      />
+    )
+  }
   return (
     <div
       ref={ref}
@@ -101,11 +122,4 @@ function CardFooter({
 }
 CardFooter.displayName = "CardFooter"
 
-export {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-}
+export { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }

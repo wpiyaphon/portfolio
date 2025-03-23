@@ -1,4 +1,4 @@
-import Roadmap from "@/components/roadmap"
+import Roadmap from "@/components/roadmap/roadmap"
 import SectionDivider from "@/components/section-divider"
 import TypingText from "@/components/typing-text"
 import Image from "next/image"
