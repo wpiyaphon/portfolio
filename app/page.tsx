@@ -104,8 +104,12 @@ export default function Home() {
           title="About"
           subtitle={(
             <TypingText
-              text1="As a web developer with a passion for creating functional and visually appealing web applications,"
-              text2="I am always eager to learn and take on new challenges to improve my skills."
+              desktopText="As a web developer with a passion for creating functional and visually appealing web applications,\n
+              I am always eager to learn and take on new challenges to improve my skills."
+              tabletText="As a web developer with a passion for creating functional and visually\nappealing web applications,
+              I am always eager to learn\nand take on new challenges to improve my skills."
+              mobileText="As a web developer with a passion for creating\nfunctional and visually appealing web applications\n
+              I am always eager to learn and take on\nnew challenges to improve my skills."
             />
           )}
         />

@@ -1,11 +1,11 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin 'tailwindcss-animate';
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --animate-typing: typing 2.5s steps(40) forwards, blink 0.7s 3;
+  --animate-typing: typing 1.75s steps(30) forwards, blink 0.7s 3;
 
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
