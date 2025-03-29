@@ -21,7 +21,7 @@ export default function Roadmap({ items }: RoadmapProps) {
   return (
     <div className="max-w-7xl mx-auto relative">
       {/* -- Divider -- */}
-      <div className="absolute left-[16px] md:left-1/2 top-0 bottom-0 w-[0.5px] md:translate-x-[-50%] h-full bg-gray-300 bg-opacity-60 " />
+      <div className="absolute left-[16px] md:left-1/2 top-0 bottom-0 w-[1px] md:translate-x-[-50%] h-full bg-gray-300/50 " />
 
       <div className="block space-y-12">
         {items.map((item, index) => (

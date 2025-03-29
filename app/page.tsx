@@ -58,7 +58,7 @@ export default function Home() {
             <br />
             specializing in
             {" "}
-            <span className="text-transparent bg-gradient-to-tr from-[#008DD2] to-[#01B2EB] bg-clip-text">
+            <span className="text-transparent bg-linear-to-tr from-[#008DD2] to-[#01B2EB] bg-clip-text">
               React
             </span>
           </h1>

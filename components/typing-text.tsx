@@ -26,7 +26,7 @@ export default function TypingText({ text1, text2 }: TypingTextProps) {
       {text2 && (
         <div className="max-w-max mx-auto">
           <h6
-            className={`${isInView && "animate-typing [animation-delay:2.5s] delay-200"} opacity-0 overflow-hidden whitespace-nowrap`}
+            className={`${isInView && "animate-typing [animation-delay:2.5s]"} opacity-0 overflow-hidden whitespace-nowrap`}
           >
             {text2}
           </h6>

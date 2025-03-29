@@ -31,13 +31,13 @@ export default function SectionDivider({
           className={`vertical-section-line from-transparent ${TITLE_GRADIENT_COLORS[color].to}`}
         />
         <div
-          className={`relative bg-gradient-to-r ${TITLE_GRADIENT_COLORS[color].from} ${TITLE_GRADIENT_COLORS[color].to} rounded-full bg-gray-400 w-16 h-16 mx-auto mt-[-20px] z-10 flex items-center text-center`}
+          className={`relative bg-linear-to-r ${TITLE_GRADIENT_COLORS[color].from} ${TITLE_GRADIENT_COLORS[color].to} rounded-full bg-gray-400 w-16 h-16 mx-auto mt-[-20px] z-10 flex items-center text-center`}
         >
           <p className="text-black text-2xl w-full">{number}</p>
         </div>
       </div>
       <h2
-        className={`mx-auto font-bold text-transparent bg-clip-text bg-gradient-to-r ${TITLE_GRADIENT_COLORS[color].from} ${TITLE_GRADIENT_COLORS[color].to}`}
+        className={`mx-auto font-bold text-transparent bg-clip-text bg-linear-to-r ${TITLE_GRADIENT_COLORS[color].from} ${TITLE_GRADIENT_COLORS[color].to}`}
       >
         {title}
       </h2>
