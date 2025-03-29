@@ -66,7 +66,7 @@ export default {
           "50%": { borderColor: "gray", borderRightWidth: "2px" },
         },
         typing: {
-          "0%": { opacity: "0", width: "0%" },
+          "0%": { opacity: "100", width: "0%" },
           "100%": { opacity: "100", width: "100%" },
         },
       },
