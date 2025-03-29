@@ -35,6 +35,28 @@ const CARD_VARIANT: Variants = {
     x: 52,
   },
   "visible": {
+    display: "block",
+    opacity: 1,
+    transition: {
+      bounce: 0.5,
+      duration: 1,
+      ease: "easeIn",
+      type: "spring",
+    },
+    x: 0,
+  },
+}
+
+const CAPTION_VARIANT: Variants = {
+  "hidden-left": {
+    opacity: 0,
+    x: -52,
+  },
+  "hidden-right": {
+    opacity: 0,
+    x: 52,
+  },
+  "visible": {
     opacity: 1,
     transition: {
       bounce: 0.5,
@@ -74,6 +96,7 @@ export default function RoadmapCard({
   const inView = useInView(ref, { amount: 0.8, once: true })
 
   const cardAnimationState = inView ? "visible" : `hidden-${position}`
+  const captionAnimationState = inView ? "visible" : `hidden-${position}`
   const iconAnimationState = inView ? "visible" : "hidden"
 
   return (
@@ -99,8 +122,8 @@ export default function RoadmapCard({
 
         {/* -- Caption -- */}
         <motion.div
-          variants={CARD_VARIANT}
-          animate={cardAnimationState}
+          variants={CAPTION_VARIANT}
+          animate={captionAnimationState}
           className={`absolute p-2 z-20 hidden md:block ${
             position === "left" ? "md:left-16" : "md:-left-36"
           }`}
@@ -113,7 +136,7 @@ export default function RoadmapCard({
       <motion.div
         variants={CARD_VARIANT}
         animate={cardAnimationState}
-        className={`md:w-[45%] w-[calc(100%-40px)] ml-10 md:ml-0 ${
+        className={`md:w-[45%] w-[calc(100%-20px)] ml-10 hidden md:ml-0 ${
           position === "left" ? "md:mr-8" : "md:ml-8"
         }`}
       >
